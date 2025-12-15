@@ -24,6 +24,9 @@ def check_email():
         elif len(username) < 3:
             print("\nUsername must be at least 3 characters long. Try again.\n")
 
+        elif len(email) > 10:
+            print("\nEmail must not exceed 10 characters. Try again.\n")
+
         elif len(password) < 6:
             print("\nPassword must be at least 6 characters long. Try again.\n")
 
