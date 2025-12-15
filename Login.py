@@ -19,6 +19,14 @@ def check_email():
             print("\nLogin successful!")
             GUI(username)
             break
+        elif not username.isalnum():
+            print("\nUsername must be alphanumeric. Try again.\n")
+        elif len(username) < 3:
+            print("\nUsername must be at least 3 characters long. Try again.\n")
+        elif len(password) < 6:
+            print("\nPassword must be at least 6 characters long. Try again.\n")
+        elif "@" not in email or "." not in email:
+            print("\nInvalid email format. Try again.\n")
         elif not username or not email or not password:
             print("\nPlease fill in all fields. Try again.\n")
         else:
